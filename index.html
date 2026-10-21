@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shreya Patil — MCA student and aspiring software developer.">
+  <title>Shreya Patil | Developer Portfolio</title>
+  <style>
+    :root { --navy:#101d35; --blue:#4d7cfe; --cyan:#69d5d0; --ink:#17233b; --muted:#64748b; --paper:#f5f7fb; --line:#e1e7f0; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1080px, calc(100% - 36px)); margin:auto; }
+    header { background:var(--navy); color:white; position:relative; overflow:hidden; }
+    header:after { content:""; position:absolute; width:340px; height:340px; border-radius:50%; right:-90px; top:-160px; background:radial-gradient(circle, rgba(105,213,208,.24), rgba(77,124,254,.03) 70%); }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:22px 0; gap:20px; position:relative; z-index:1; }
+    .brand { font-weight:800; letter-spacing:.3px; }
+    nav .links { display:flex; flex-wrap:wrap; gap:20px; }
+    nav a { text-decoration:none; color:#dce6f6; font-size:.92rem; }
+    nav a:hover { color:var(--cyan); }
+    .hero { padding:76px 0 88px; display:grid; grid-template-columns:1.45fr .75fr; align-items:center; gap:50px; position:relative; z-index:1; }
+    .eyebrow { text-transform:uppercase; letter-spacing:2px; font-size:.78rem; font-weight:800; color:var(--cyan); }
+    h1 { font-size:clamp(2.6rem, 6vw, 4.8rem); line-height:1.04; letter-spacing:-2px; margin:14px 0 18px; }
+    .hero p { max-width:650px; color:#c5d1e4; font-size:1.08rem; }
+    .hero strong { color:white; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-block; padding:12px 18px; border-radius:11px; font-weight:750; text-decoration:none; border:1px solid transparent; }
+    .primary { background:var(--blue); color:white; }
+    .secondary { border-color:#52617a; color:white; }
+    .profile-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:24px; padding:26px; backdrop-filter:blur(8px); }
+    .monogram { width:82px; height:82px; border-radius:22px; background:linear-gradient(135deg,var(--blue),var(--cyan)); display:grid; place-items:center; color:#0b1730; font-size:2rem; font-weight:900; margin-bottom:20px; }
+    .profile-card h2 { margin:0 0 4px; font-size:1.35rem; }
+    .profile-card p { margin:0; font-size:.94rem; }
+    .profile-meta { border-top:1px solid rgba(255,255,255,.16); margin-top:20px; padding-top:16px; color:#d2dced; font-size:.9rem; }
+    main { padding:30px 0 70px; }
+    section { padding:34px 0; }
+    .section-head { margin-bottom:22px; }
+    .section-head .eyebrow { color:var(--blue); }
+    h2.section-title { margin:6px 0 0; font-size:clamp(1.7rem,3vw,2.25rem); letter-spacing:-.8px; }
+    .intro { max-width:780px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:white; border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 7px 24px rgba(16,29,53,.035); }
+    .card h3 { margin:8px 0 8px; font-size:1.1rem; }
+    .card p { margin:0; color:var(--muted); font-size:.95rem; }
+    .tag { display:inline-block; border-radius:999px; padding:5px 9px; background:#edf2ff; color:#3558b8; font-size:.75rem; font-weight:800; }
+    .skill-list { display:flex; flex-wrap:wrap; gap:10px; }
+    .skill { background:white; border:1px solid var(--line); padding:10px 14px; border-radius:10px; font-weight:700; font-size:.92rem; }
+    .notice { border-left:4px solid var(--cyan); background:#eaf9f8; border-radius:0 14px 14px 0; padding:16px 18px; color:#285452; }
+    .contact { background:var(--navy); color:white; border-radius:24px; padding:30px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .contact p { color:#c5d1e4; margin:6px 0 0; }
+    .contact a { color:var(--cyan); font-weight:750; text-decoration:none; overflow-wrap:anywhere; }
+    footer { color:var(--muted); text-align:center; padding:22px 0 35px; font-size:.85rem; }
+    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:50px 0 58px; gap:28px; } .grid { grid-template-columns:1fr; } nav { align-items:flex-start; flex-direction:column; } nav .links { gap:14px; } .contact { align-items:flex-start; flex-direction:column; } }
+    @media print { nav,.actions { display:none; } header { print-color-adjust:exact; -webkit-print-color-adjust:exact; } body { background:white; } }
+  </style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <div class="brand">SP<span style="color:#69d5d0">.</span> Portfolio</div>
+      <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Practical Work</a><a href="#contact">Contact</a></div>
+    </nav>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">MCA Student · Aspiring Developer</div>
+        <h1>Shreya<br>Patil<span style="color:#69d5d0">.</span></h1>
+        <p>Building a strong foundation in software development through programming practice, web technologies, and database fundamentals. Eager to learn, collaborate, and contribute to real-world IT solutions.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore Practical Work</a><a class="btn secondary" href="#contact">Contact Me</a></div>
+      </div>
+      <aside class="profile-card">
+        <div class="monogram">SP</div>
+        <h2>Developer / IT Fresher</h2>
+        <p>Curious learner focused on core programming and web development.</p>
+        <div class="profile-meta"><div><strong>Education</strong></div><div>MCA Student</div><div style="margin-top:10px"><strong>University</strong></div><div>Dnyaan Prasad Global University, Tathwade</div></div>
+      </aside>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section id="about">
+    <div class="section-head"><div class="eyebrow">A little about me</div><h2 class="section-title">Learning with purpose.</h2></div>
+    <p class="intro">I am an MCA student with a background in Computer Science and an interest in software development and IT. I am developing my skills in Java, SQL, and front-end web technologies while strengthening my understanding of programming fundamentals and problem-solving. I welcome opportunities to learn from experienced teams and apply my knowledge to practical challenges.</p>
+  </section>
+  <section id="skills">
+    <div class="section-head"><div class="eyebrow">Technical toolkit</div><h2 class="section-title">Skills I’m developing</h2></div>
+    <div class="skill-list">
+      <span class="skill">Java</span><span class="skill">SQL / MySQL</span><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span><span class="skill">React</span><span class="skill">Object-Oriented Programming</span><span class="skill">Database Fundamentals</span>
+    </div>
+    <p class="intro" style="font-size:.9rem;margin-top:14px">Skill list reflects current learning areas. Be ready to discuss your actual level of comfort with each technology.</p>
+  </section>
+  <section id="projects">
+    <div class="section-head"><div class="eyebrow">Practical learning</div><h2 class="section-title">Work in progress</h2></div>
+    <div class="notice">I am at the beginning of my project-building journey. The items below are planned practice work, not completed client or production projects. I will update this section as I build and test each item.</div>
+    <div class="grid" style="margin-top:18px">
+      <article class="card"><span class="tag">PLANNED</span><h3>Responsive Portfolio Website</h3><p>Create a responsive personal website using HTML, CSS, and JavaScript to practise layout, accessibility, and mobile-friendly design. This portfolio is the starting point.</p></article>
+      <article class="card"><span class="tag">PLANNED</span><h3>Java Fundamentals Practice</h3><p>Build a collection of small Java exercises covering variables, conditions, loops, arrays, methods, and object-oriented programming concepts.</p></article>
+      <article class="card"><span class="tag">PLANNED</span><h3>SQL Practice Database</h3><p>Design a small sample database and practise CREATE, INSERT, SELECT, UPDATE, DELETE, joins, and basic data constraints using MySQL.</p></article>
+    </div>
+  </section>
+  <section id="goal">
+    <div class="section-head"><div class="eyebrow">Career direction</div><h2 class="section-title">Ready to learn and contribute.</h2></div>
+    <p class="intro">My goal is to start my career in software development or IT, strengthen my technical abilities through hands-on work, and contribute with curiosity, consistency, and a willingness to learn.</p>
+  </section>
+  <section id="contact">
+    <div class="contact"><div><div class="eyebrow">Let’s connect</div><h2 style="margin:7px 0 0;font-size:1.7rem">Shall we build something useful?</h2><p>Open to entry-level developer and IT opportunities.</p></div><div><div style="font-size:.8rem;color:#c5d1e4;margin-bottom:5px">EMAIL</div><a href="mailto:shreyupatil576@gmail.com">shreyupatil576@gmail.com</a></div></div>
+  </section>
+</main>
+<footer>© <span id="year">2026</span> Shreya Patil · Developer Portfolio</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
